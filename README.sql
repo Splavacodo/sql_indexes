@@ -10,5 +10,5 @@ CREATE BITMAP INDEX temp_idx ON employees(gender);
 --Indexes can be created on table creation
 
 CREATE TABLE employee_temp
-(employee_id NUMBER(6) PRIMARY KEY USING INDEX((CREATED INDEX temp_idx ON employee_temp(employee_id)), first_name VARCHAR(20), 
+(employee_id NUMBER(6) PRIMARY KEY USING INDEX((CREATE INDEX temp_idx ON employee_temp(employee_id)), first_name VARCHAR(20), 
 last_name VARCHAR(25)); 
